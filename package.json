@@ -1,0 +1,24 @@
+{
+  "name": "influxdb-pickle",
+  "version": "1.0.0",
+  "description": "Pickles influxdb stats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherBThai/influxdb-pickle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherBThai/influxdb-pickle/issues"
+  },
+  "homepage": "https://github.com/ChristopherBThai/influxdb-pickle#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "influx": "^5.6.3"
+  }
+}
