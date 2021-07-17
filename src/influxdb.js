@@ -2,6 +2,8 @@ const Influx = require('influx');
 const influxClient = new Influx.InfluxDB({
 	host: process.env.INFLUX_HOST,
 	database: process.env.INFLUX_DB,
+	username: process.env.INFLUX_USER,
+	password: process.env.INFLUX_PASSWORD,
 	schema: [
 		{
 			measurement: 'commands',
