@@ -1,4 +1,5 @@
 const Influx = require('influx');
+/*
 const influxClient = new Influx.InfluxDB({
 	host: process.env.INFLUX_HOST,
 	database: process.env.INFLUX_DB,
@@ -17,10 +18,12 @@ const influxClient = new Influx.InfluxDB({
 		}
 	]
 });
+*/
 
 let pickle = {};
 
 exports.addCommandData = function(req,res){
+	return;
 	if(req.body.password!=process.env.PASSWORD) {
 		res.sendStatus(400);
 		return;
