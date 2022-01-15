@@ -23,7 +23,8 @@ const influxClient = new Influx.InfluxDB({
 let pickle = {};
 
 exports.addCommandData = function(req,res){
-	return;
+	res.sendStatus(200);
+	/*
 	if(req.body.password!=process.env.PASSWORD) {
 		res.sendStatus(400);
 		return;
@@ -40,8 +41,10 @@ exports.addCommandData = function(req,res){
 	pickle[user][command].count++;
 
 	res.sendStatus(200);
+	*/
 };
 
+/*
 function sendPickle() {
 	const tempPickle = pickle;
 	pickle = {};
@@ -69,5 +72,6 @@ function sendPickle() {
 }
 
 setInterval(sendPickle,5000);
+*/
 
 
