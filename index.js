@@ -7,9 +7,11 @@ app.use(express.urlencoded()); // to support URL-encoded bodies
 
 const influxdb = require('./src/influxdb.js');
 const logstash = require('./src/logstash.js');
+const ramCheck = require('./src/ramCheck.js');
 
 app.post('/command', influxdb.addCommandData);
 app.post('/metric', logstash.addCommandData);
+app.post('/captcha', logstash.addCaptchaData);
 
 app.listen(process.env.PORT, () => {
 	console.log(`InfluxDB Pickler listening on ${process.env.PORT}`);
