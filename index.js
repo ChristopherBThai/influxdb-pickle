@@ -12,6 +12,7 @@ const ramCheck = require('./src/ramCheck.js');
 app.post('/command', influxdb.addCommandData);
 app.post('/metric', logstash.addCommandData);
 app.post('/captcha', logstash.addCaptchaData);
+app.post('/qos', logstash.addQosData);
 
 app.listen(process.env.PORT, () => {
 	console.log(`InfluxDB Pickler listening on ${process.env.PORT}`);

@@ -52,3 +52,22 @@ exports.addCaptchaData = function (req, res) {
 
 	res.sendStatus(200);
 };
+
+exports.addQosData = function (req, res) {
+	if (req.body.password!=process.env.PASSWORD) {
+		res.sendStatus(400);
+		return;
+	}
+
+	const metric  = req.body;
+	const text = metric.text;
+
+	metric.timestamp = new Date().toISOString();
+	metric.file = "qos";
+	delete metric.test;
+	delete metric.password;
+
+	logger.info(JSON.stringify(metric));
+
+	res.sendStatus(200);
+};
